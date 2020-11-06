@@ -1,0 +1,9 @@
+homer@simpsons.sit.ie
+marge@simpsons.sit.ie
+lisa@simpsons.sit.ie
+bart@simpsons.sit.ie
+maggie@simpsons.sit.ie
+joey@friends.sit.ie
+ross@friends.sit.ie
+chandler@friends.sit.ie
+monica@friends.sit.ie
