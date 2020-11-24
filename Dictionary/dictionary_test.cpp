@@ -94,7 +94,7 @@ int main() {
     d1.update("maison","house");
     d1.update("papillon","butterfly");
     d1.lookup("papillon",trans_english);
-    cout <<"translist1 translation of paaillon is: "<< trans_english << endl;
+    cout <<"translist1 translation of papillon is: "<< trans_english << endl;
     d2.update("grenouille","frog");
     d2.lookup("grenouille",trans_english);
     cout << "translist2 translation of grenouille is: "<< trans_english << endl;
