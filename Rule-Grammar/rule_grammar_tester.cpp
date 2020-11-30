@@ -13,6 +13,10 @@ int main(int argc, char *argv[]) {
   string fname;
   fname = string(argv[1]);
   Grammar g(fname);
+  if(g.rules.size() == 0) {
+    cout << "the file " << fname << " did not contain any rules" << endl;
+    return 0;
+  }
   g.show();
   return 0;
 }

@@ -85,19 +85,36 @@ int main() {
     // fr_words.push_back("sante");
     // fr_words.push_back("maison");
     // tester_function(d2, "translist2", fr_words);
-    string trans_french;
-    d1.french_lookup("house",trans_french);
-    cout << "translist1 translation of house is: "<< trans_french << endl;
+    string trans_french; 
+    if(d1.french_lookup("house",trans_french)) {
+      cout << "translist1 translation of house is: "<< trans_french << endl;
+    }
+     else {
+      cout << "no translist1 trans of maison\n";
+    } 
     d1.update("maison", "mansion");
     d1.lookup("maison",trans_english);
-    cout <<"translist1 translation of maison is: "<< trans_english << endl;
+    if(d1.lookup("maison",trans_english)) {
+      cout <<"translist1 translation of maison is: "<< trans_english << endl;
+    }
+    else {
+      cout << "no translist1 trans of maison\n";
+    }
     d1.update("maison","house");
     d1.update("papillon","butterfly");
-    d1.lookup("papillon",trans_english);
-    cout <<"translist1 translation of papillon is: "<< trans_english << endl;
+    if( d1.lookup("papillon",trans_english)) {
+      cout << "translist1 translation of papillon is: "<<trans_english << endl;
+    }
+    else {
+      cout << "no translist1 trans of papillon" << endl;
+    }
     d2.update("grenouille","frog");
-    d2.lookup("grenouille",trans_english);
-    cout << "translist2 translation of grenouille is: "<< trans_english << endl;
+    if(d2.lookup("grenouille",trans_english)) {
+      cout << "translist2 translation of grenouille is: "<< trans_english << endl;
+    }
+    else {
+      cout << "no translist2 trans of grenouille\n";
+    }
     d1.export_to_file("myfile1");
     d2.export_to_file("myfile2");
     cout << "Dictionaries d1 and d2 exported to myfile1 and myfile2 respectively" << endl;

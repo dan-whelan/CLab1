@@ -3,6 +3,10 @@
 
 Rule::Rule() {}
 
+/***********************************************************/
+/* A constructor that takes a single line of input and     */
+/* breaks it into the mother and daughter componants.      */
+/***********************************************************/
 Rule::Rule(string input) {
   rule_as_string = input;
   size_t i, start, len;
@@ -22,6 +26,14 @@ Rule::Rule(string input) {
   category = rule_as_string.substr(start);
   daughters.push_back(category);
 }
+
+/***********************************************************/
+/* Function that prints rule out in a format similar to    */
+/* rule parsing assignment                                 */
+/* <mother> -->                                            */
+/*             <daughter1>                                 */
+/*             <daughter2> etc.                            */
+/***********************************************************/
 
 void Rule::show() {
   cout << mother;

@@ -4,6 +4,12 @@
 
 Grammar::Grammar() {}
 
+/***********************************************************/
+/* Constructor that takes in the name of a file and breaks */
+/* its contents into rules assuming each line contains a   */
+/* rule and each rule has its mother and daughters split   */
+/* using a ' --> '                                         */
+/***********************************************************/
 Grammar::Grammar(string filename) {
   ifstream f;
   f.open(filename);
@@ -14,6 +20,11 @@ Grammar::Grammar(string filename) {
   }
 }
 
+/***********************************************************/
+/* Function that prints out the grammar class' vector of   */
+/* rules using the function show() described in the        */
+/* Rule.cpp class                                          */
+/***********************************************************/
 void Grammar::show() {
   for(int i = 0; i < rules.size(); i++) {
     rules[i].show();
