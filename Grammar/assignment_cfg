@@ -1,0 +1,16 @@
+% Grammar for "gram_eng_tests"
+s --> np,vp
+np --> n
+np --> adj,n
+np --> det,n
+np --> np,det,vp
+np --> np,np,iv
+vp --> iv,np
+n --> [A]
+n --> [B]
+iv --> [kissed]
+iv --> [saw]
+det --> [the]
+det --> [that]
+adj --> [three]
+initial(s)

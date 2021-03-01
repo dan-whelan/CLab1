@@ -1,0 +1,118 @@
+/*Output for gram_eng_tests */
+s --> np,vp
+np --> n
+np --> adj,n
+np --> det,n
+np --> np,det,vp
+np --> np,np,iv
+vp --> iv,np
+n --> [A]
+n --> [B]
+n --> [people]
+iv --> [kissed]
+iv --> [saw]
+det --> [the]
+det --> [that]
+adj --> [three]
+initial(s)
+*************************************
+pos test 0 A kissed B
+s
+|___np
+|   |___n
+|	|___[A]
+|   
+|___vp
+    |___iv
+    |	|___[kissed]
+    |
+    |___np
+	|___n
+	    |___[B]
+YEP pos
+*************************************
+neg test 1 A kissed saw B
+YEP neg
+*************************************
+pos test 2 three people kissed B
+s
+|___np
+|   |___adj
+|   |	|___[three]
+|   |
+|   |___n
+|	|___[people]
+|   
+|___vp
+    |___iv
+    |	|___[kissed]
+    |
+    |___np
+	|___n
+	    |___[B]
+YEP pos
+*************************************
+neg test 3 kissed B
+YEP neg
+*************************************
+pos test 4 the person that kissed B saw A
+s
+|___np
+|   |___np
+|   |   |___det
+|   |   |   |___[the]
+|   |   |
+|   |   |___n
+|   |       |___[person] 	
+|   |
+|   |___det
+|   |	|___[that]
+|   |
+|   |___vp
+|    	|___iv
+|    	|   |___[kissed]
+|    	|
+|    	|___np
+|	    |___n
+|	        |___[B]
+|   
+|___vp
+    |___iv
+    |	|___[saw]
+    |
+    |___np
+	|___n
+	    |___[A]
+YEP pos
+*************************************
+pos test 5 the person that A kissed saw B
+s
+|___np
+|   |___np
+|   |   |___det
+|   |   |   |___[the]
+|   |   |
+|   |   |___n
+|   |       |___[person] 	
+|   |
+|   |___np
+|   |   |___det
+|   |   |   |___[that]
+|   |   |
+|   |   |___n
+|   |       |___[A] 	
+|   |
+|   |___iv
+|    	|___[kissed]
+|   
+|___vp
+    |___iv
+    |	|___[saw]
+    |
+    |___np
+	|___n
+	    |___[B]
+YEP pos
+*************************************
+neg test 6 the person that A kissed B saw A
+YEP neg
