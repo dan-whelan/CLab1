@@ -8,6 +8,8 @@ np --> np,np,iv
 vp --> iv,np
 n --> [A]
 n --> [B]
+n --> [person]
+n --> [people]
 iv --> [kissed]
 iv --> [saw]
 det --> [the]
